@@ -9,15 +9,15 @@ import SwiftUI
 
 struct CheckoutView: View {
     @EnvironmentObject var order: Order
-    @State private var paymentType = "Cash"
     
     let paymentTypes = ["Cash", "credit Card", "iDine Points"];
     let tipAmouts = [10,15,20,25,0]
     
     @State private var tipAmount = 15
-    @State private var addLoyaltyDetails = false
-    @State private var loyalty = ""
     @State private var showingPaymentalert = false
+    @State private var addLoyaltyDetails = false
+    @State private var paymentType = "Cash"
+    @State private var loyalty = ""
     
     var totalPrice: String {
         let total = Double(order.total)
